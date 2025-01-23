@@ -1,0 +1,143 @@
+@import url("https://fonts.googleapis.com/css2?family=Krona+One&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+
+:root {
+    --black: #09122C;
+    --white: #872341;
+    --blue: #BE3144;
+    --botonesTexto: #E17564;
+    --fuenteMon: "Montserrat Alternates", serif;
+    --fuenteKro: "Krona One", serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: var(--black);
+    box-sizing: border-box;
+}
+
+.presentacion {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 4% 10%;
+    gap: 82px;
+}
+
+.presentacion-contenido {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    gap: 50px;
+}
+
+.presentacion-imagen {
+    width: 50%;
+    max-width: 550px;
+    height: auto;
+}
+
+h1 {
+    color: var(--white);
+    font-size: 2.25rem;
+    font-family: var(--fuenteKro);
+}
+
+h2 {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-family: var(--fuenteMon);
+    font-weight: 400;
+}
+
+p {
+    color: var(--white);
+    font-size: 1.5rem;
+    font-family: var(--fuenteMon);
+    font-weight: 400;
+}
+
+.titulo-destacar {
+    color: var(--blue);
+}
+
+.presentacion-enlaces {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+    flex-direction: column;
+}
+
+.presentacion-enlaces a {
+    color: var(--blue);
+    width: 50%;
+    padding: 21.5px 0;
+    text-align: center;
+    border-radius: 16px;
+    font-size: 1.5rem;
+    font-family: var(--fuenteMon);
+    font-weight: 600;
+    text-decoration: none;
+    transition: background-color 0.3s;
+    border: 2px solid;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+}
+
+.presentacion-enlaces a:hover {
+    background-color: #272727;
+}
+
+footer {
+    color: var(--black);
+    background-color: var(--blue);
+    padding: 24px;
+    text-align: center;
+    font-family: var(--fuenteMon);
+    font-size: 1.5rem;
+    font-weight: 400;
+}
+
+header {
+    background-color: var(--black);
+    padding: 2% 0% 0% 15%;
+}
+
+nav {
+    display: flex;
+    gap: 80px;
+}
+
+nav a {
+    color: var(--blue);
+    text-decoration: none;
+    font-family: var(--fuenteMon);
+    font-size: 1.5rem;
+    font-weight: 600;
+}
+
+@media (max-width: 1200px) {
+    .presentacion {
+        flex-direction: column-reverse;
+        padding: 5%;
+    }
+    .presentacion-contenido {
+        width: auto;
+    }
+    nav{
+        justify-content: center;
+    }
+    .presentacion-imagen {
+        width: auto;
+        max-width: auto;
+    }
+
+    .presentacion-enlaces a {
+        width: auto;
+        max-width: 17.5rem;
+    }
+}
